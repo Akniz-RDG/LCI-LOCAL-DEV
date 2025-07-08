@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario de Ansiedad Precompetitiva (CSAI-2)</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="hero-header">
+    <img src="../../assets/img/insi1.jpg" alt="LCI Insight Logo" class="hero-logo"/>
+  </header>
+
+  <main>
+    <section class="smart-section">
+      <h2>🧠 Cuestionario de Ansiedad Precompetitiva (CSAI-2)</h2>
+      <p>Completa el siguiente cuestionario antes de tus partidas para conocer tu perfil de ansiedad precompetitiva.</p>
+      <p style="color: #ffad33"><strong>⚠️ Importante:</strong> Esta cuestionario es de uso orientativo y no reemplaza una evaluación profesional completa.</p>
+
+      <form id="form-ansiedad">
+        <table class="poms-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Nada</th>
+              <th>Poco</th>
+              <th>Moderado</th>
+              <th>Bastante</th>
+              <th>Muchísimo</th>
+            </tr>
+          </thead>
+          <tbody id="ansiedad-items">
+            <!-- Preguntas generadas por JS -->
+          </tbody>
+        </table>
+        <br>
+        <button type="submit" class="btn">Enviar respuestas</button>
+        <button type="button" class="btn" id="reiniciar-btn">🔄 Reiniciar test</button>
+      </form>
+    </section>
+
+    <section class="smart-section">
+      <h3>📊 Resultado gráfico</h3>
+      <canvas id="ansiedadChart" width="400" height="300"></canvas>
+    </section>
+
+    <section class="smart-section">
+      <h3>🧾 Interpretación</h3>
+      <p id="ansiedad-explicacion"></p>
+    </section>
+
+    <section class="smart-section">
+      <h3>📂 Historial de tests realizados</h3>
+      <button id="borrar-historial-btn">🗑️ Borrar historial de test</button>
+      <div id="historial-tests"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>LCI Insight #GO LATAM </p>
+  </footer>
+
+  <script src="../../scripts/psico/test-ansiedad.js"></script>
+</body>
+</html>

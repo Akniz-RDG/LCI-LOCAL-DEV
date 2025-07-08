@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPRD Simplificado</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+</head>
+<body>
+  <header class="hero-header">
+    <img src="../../assets/img/insi1.jpg" alt="LCI Insight Logo" class="hero-logo" />
+  </header>
+
+  <main>
+    <section class="smart-section">
+      <h2>🧠 Cuestionario de Recursos Psicodeportivos (CPRD) - Versión simplificada</h2>
+      <p>Responde según cómo te sientes habitualmente en contexto de entrenamiento o competición.</p>
+      <p style="color: #ffad33"><strong>⚠️ Importante:</strong> Esta es una versión reducida del cuestionario original. Su uso es orientativo y no reemplaza una evaluación profesional completa.</p>
+
+      <form id="form-cprd">
+        <table class="poms-table">
+          <thead>
+            <tr>
+              <th>Ítem</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+            </tr>
+          </thead>
+          <tbody id="cprd-items">
+            <!-- Preguntas renderizadas por JS -->
+          </tbody>
+        </table>
+        <br>
+        <button type="submit" class="btn">Enviar respuestas</button>
+        <button type="button" class="btn" id="reiniciar-btn">🔄 Reiniciar test</button>
+      </form>
+    </section>
+
+    <section class="smart-section">
+      <h3>📊 Resultado general</h3>
+      <canvas id="cprdChart" width="400" height="300"></canvas>
+    </section>
+    <section class="smart-section">
+  <h3>📂 Historial de respuestas</h3>
+  <div id="historial-cprd"></div>
+</section>
+  </main>
+
+  <footer>
+    <p>LCI Insight #GO LATAM </p>
+  </footer>
+
+  <script src="../../scripts/psico/test-CPRD.js"></script>
+</body>
+</html>

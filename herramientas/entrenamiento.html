@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planes de Entrenamiento SMART - LCI Insight</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <header class="hero-header">
+    <img src="../assets/img/insi1.jpg" alt="LCI Insight Logo" class="hero-logo"/>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-container">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-icon">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../herramientas.html">Herramientas</a></li>
+        <li><a href="../cursos.html">Cursos</a></li>
+        <li><a href="../about.html">Sobre Nosotros</a></li>
+        <li><a href="../apoyanos.html">Apóyanos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="smart-section">
+      <h2>📋 Planes de Entrenamiento SMART</h2>
+      <p>Crea y gestiona tus metas, objetivos y actividades.</p>
+
+      <div class="crear-plan-contenedor">
+        <button id="crearPlanBtn">➕ Crear Plan de Entrenamiento</button>
+
+        <p id="advertencia-limite" style="color: #FF4F4F; font-weight: bold; display: none; margin-top: 10px;">
+          ⚠️ ¿Te parece alcanzable abarcar tantos planes de entrenamiento?<br>
+          Te recomendamos no tener más de 3 planes de entrenamiento activos a la vez...<br>
+          ¡Queremos que logres alcanzar tus metas!
+        </p>
+
+        <div id="formulario-plan" style="display: none; margin-top: 20px;">
+          <input type="text" id="nueva-meta" placeholder="Escribe la meta general..." required />
+          <button id="guardar-meta-btn">Guardar Meta</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="smart-section" id="contenedor-planes">
+      <!-- Aquí se insertarán los planes dinámicamente -->
+    </section>
+  </main>
+
+  <footer>
+    <p>LCI Insight #GO LATAM </p>
+  </footer>
+
+  <script src="../scripts/smart.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test de Ánimo para Deportistas (POMS)</title>
+  <link rel="stylesheet" href="../../styles/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="hero-header">
+    <img src="../../assets/img/insi1.jpg" alt="LCI Insight Logo" class="hero-logo"/>
+  </header>
+
+  <main>
+    <div style="margin-bottom: 1rem;">
+  <a href="../psicometrias.html" class="btn" style="text-decoration: none;">
+    🔙 Volver a los demás tests
+  </a>
+</div>
+    <section class="smart-section">
+      <h2><span>😊</span> <span style="color: #5f5eff">Test de Ánimo para Deportistas (POMS)</span></h2>
+      <p>A continuación encontrarás una serie de estados. Elige en una escala de 0 a 3 que tanto has experimentado este estado en las últimas 4 semanas.</p>
+      <p style="color: #ffad33"><strong>⚠️ Importante:</strong> Esta cuestionario es de uso orientativo y no reemplaza una evaluación profesional completa.</p>
+      <form id="form-poms">
+        <table class="poms-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Nada</th>
+              <th>Poco</th>
+              <th>Moderado</th>
+              <th>Bastante</th>
+              <th>Muchísimo</th>
+            </tr>
+          </thead>
+          <tbody id="poms-items">
+            <!-- Aquí se insertan las preguntas con JS -->
+          </tbody>
+        </table>
+        <br>
+        <button type="submit" class="btn">Enviar respuestas</button>
+        <button type="button" class="btn" id="reiniciar-btn">🔄 Reiniciar test</button>
+      </form>
+    </section>
+
+    <section class="smart-section">
+      <h3>Resultado Gráfico</h3>
+      <canvas id="pomsChart" width="400" height="300"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>LCI Insight #GO LATAM </p>
+  </footer>
+
+  <script src="../../scripts/psico/test-POMS.js"></script>
+</body>
+</html>

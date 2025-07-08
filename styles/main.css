@@ -1,0 +1,712 @@
+/* ======== ESTILOS GENERALES ======== */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+}
+
+h1, h2 {
+  color: #2B2BFF;
+  text-shadow: 0 0 4px #2B2BFF;
+}
+
+a {
+  color: #2B2BFF;
+}
+
+section {
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1000px;
+}
+
+/* ======== HEADER HERO CON LOGO ======== */
+
+.hero-header {
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-logo {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-bottom: 2px solid #2B2BFF;
+}
+
+/* ======== NAVEGACIÓN ======== */
+
+.main-nav {
+  background-color: #0a0a0a;
+  box-shadow: 0 2px 8px rgba(43, 43, 255, 0.3);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.nav-icon {
+  display: none;
+  font-size: 26px;
+  color: #2B2BFF;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links a {
+  color: #2B2BFF;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  text-shadow: 0 0 4px #2B2BFF;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2B2BFF;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 700px) {
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0A0A0A;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 5px 10px #000;
+    z-index: 10;
+  }
+
+  .nav-toggle:checked + .nav-icon + .nav-links {
+    display: flex;
+  }
+}
+
+/* ======== TARJETAS DE HERRAMIENTAS Y CURSOS ======== */
+
+.tool-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tool-card {
+  background-color: #1A1A1A;
+  border: 1px solid #2B2BFF;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1 1 220px;
+  max-width: 300px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: scale(1.05);
+  background-color: #2B2BFF22;
+  box-shadow: 0 0 8px #2B2BFF;
+}
+
+/* ======== PIE DE PÁGINA ======== */
+
+footer {
+  background-color: #121212;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #CCCCCC;
+}
+
+
+/* ==== ESTILOS PARA SMART TOOL ==== */
+
+#smartApp {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.smart-section {
+  background-color: #111;
+  border: 1px solid #2B2BFF;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px #2B2BFF22;
+}
+
+.smart-section h3 {
+  margin-top: 0;
+  color: #2B2BFF;
+  text-shadow: 0 0 5px #2B2BFF;
+}
+
+.smart-section input[type="text"],
+.smart-section input[type="date"],
+.smart-section select,
+.smart-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #1A1A1A;
+  color: white;
+  border: 1px solid #2B2BFF;
+  border-radius: 8px;
+}
+
+.smart-section button {
+  background-color: #2B2BFF;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.smart-section button:hover {
+  background-color: #1A1AFF;
+}
+
+.smart-actividad {
+  margin: 5px 0;
+  padding: 10px;
+  border-left: 4px solid #2B2BFF;
+  background-color: #1e1e1e;
+  border-radius: 6px;
+}
+
+.meta-selector {
+  margin-top: 10px;
+}
+
+.progreso-barra {
+  height: 12px;
+  background: #2B2BFF;
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+/* === Estilo general de cada plan === */
+.smart-section {
+  background-color: #111111;
+  border: 1px solid #2B2BFF;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 30px auto;
+  box-shadow: 0 0 12px #2B2BFF22;
+  max-width: 900px;
+}
+
+/* === Botones de acción === */
+.smart-section button {
+  background-color: #2B2BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.smart-section button:hover {
+  background-color: #1a1aff;
+  transform: scale(1.03);
+}
+
+/* === Estilo de los objetivos === */
+.smart-actividad {
+  background-color: #1A1A1A;
+  border-left: 4px solid #2B2BFF;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  color: #ddd;
+  box-shadow: 0 0 6px #2B2BFF33;
+}
+
+/* === Lista de actividades dentro del objetivo === */
+.smart-actividad ul {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.smart-actividad li {
+  margin-bottom: 4px;
+  background: #222;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border-left: 3px solid #2B2BFF;
+}
+
+/* === Títulos y subtítulos === */
+.smart-section h2, .smart-section h3 {
+  color: #2B2BFF;
+  text-shadow: 0 0 4px #2B2BFF;
+  margin-bottom: 10px;
+}
+
+.smart-section p {
+  color: #ccc;
+}
+
+/* === Responsive para pantallas pequeñas === */
+@media (max-width: 600px) {
+  .smart-section {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .smart-section button {
+    width: 100%;
+  }
+}
+
+.crear-plan-contenedor {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  background-color: #141414;
+  padding: 15px;
+  border: 1px solid #2b2bff44;
+  border-radius: 8px;
+}
+
+.test-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.test-button {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background-color: #1e1eff;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px #3b3bf5;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.test-button:hover {
+  background-color: #3737ff;
+  transform: scale(1.02);
+}
+
+/* ============================
+   Estilos para tabla POMS
+============================ */
+.poms-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.poms-table th,
+.poms-table td {
+  border-bottom: 1px solid #333;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.poms-table th:first-child,
+.poms-table td:first-child {
+  text-align: left;
+  width: 280px; /* ancho fijo para columna de texto */
+}
+
+.poms-table input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Estilo general para la tabla en desktop */
+.poms-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Adaptación mobile: ocultar tabla y usar formato tarjeta */
+@media (max-width: 768px) {
+  .poms-table {
+    display: none;
+  }
+
+  #poms-items-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .poms-card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .poms-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+
+  .poms-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .poms-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+  .poms-options input[type="radio"] {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .poms-table {
+    display: none;
+  }
+
+  #poms-items-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .poms-card {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .poms-card h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+
+  .poms-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .poms-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+  .poms-options input[type="radio"] {
+    transform: scale(1.2);
+  }
+}
+
+.btn {
+  background-color: #5f5eff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #4c4ce0;
+}
+
+/* === ESTILO PARA SECCIÓN DE SERVICIOS === */
+.servicios-section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: #111111;
+  border: 1px solid #5f5eff;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(95, 94, 255, 0.3);
+}
+
+.servicios-section h2 {
+  font-size: 1.5rem;
+  color: #5f5eff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.servicios-section h2 span.emoji {
+  font-size: 1.7rem;
+}
+
+.servicios-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.servicios-table th,
+.servicios-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  vertical-align: top;
+}
+
+.servicios-table thead {
+  background-color: #222;
+}
+
+.servicios-table th {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.servicios-table tbody tr:nth-child(even) {
+  background-color: #191919;
+}
+
+.servicios-table tbody tr:hover {
+  background-color: #252525;
+  transition: background 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicios-table {
+    font-size: 0.85rem;
+  }
+
+  .servicios-section {
+    padding: 1rem;
+  }
+}
+
+.about-photo {
+  width: 150px;       /* Puedes cambiar a 120px, 180px, etc. */
+  border-radius: 8px; /* Opcional: bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Opcional: sombra */
+}
+
+.tool-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #333;
+  transition: background 0.3s ease;
+}
+
+.tool-card:hover {
+  background-color: #292929;
+}
+
+.tool-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.tool-grid img {
+  width: 80px;           /* Aumenta el tamaño horizontal */
+  height: 80px;          /* Aumenta el tamaño vertical */
+  object-fit: contain;   /* Evita que se deforme */
+  margin-right: 10px;    /* Espacio a la derecha (si está a la izquierda del texto) */
+}
+
+.fullscreen-hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.btn-hero {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #5f5eff;
+  padding: 0.8rem 1.4rem;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-hero:hover {
+  background: #4544d4;
+}
+
+.intro-section {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.mantras-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.mantra {
+  background: #1a1a1a;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  border: 1px solid #333;
+}
+
+.hero-header.fullscreen-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-header .blur-layer {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('assets/img/esports-fondo.png') no-repeat center center/cover;
+  filter: blur(8px);
+  z-index: 1;
+}
+
+.hero-header .overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 3rem 2rem;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.4); /* opcional: capa semitransparente para contraste */
+  border-radius: 12px;
+}
+
+.hero-header.fullscreen-hero {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-header .blur-layer {
+  position: absolute;
+  inset: 0;
+  background: inherit; /* hereda el fondo del header */
+  filter: blur(10px); /* desenfoque */
+  z-index: 1;
+  pointer-events: none; /* permite clics en elementos superiores */
+}
+
+.hero-header .overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 3rem 2rem;
+  color: white;
+  max-width: 700px;
+  margin: 3 auto;
+  background-color: rgba(0, 0, 0, 0.4); /* contraste */
+  border-radius: 15px;
+}

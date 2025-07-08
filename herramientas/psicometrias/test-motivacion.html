@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test de Bases Motivacionales</title>
+  <link rel="stylesheet" href="../../styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="hero-header">
+    <img src="../../assets/img/insi1.jpg" alt="LCI Insight Logo" class="hero-logo" />
+  </header>
+
+  <main>
+    <section class="smart-section">
+      <a href="../psicometrias.html" class="btn">🔙 Volver a los demás tests</a>
+      <h2>🎯 Test de Bases Motivacionales</h2>
+      <p>Reflexiona sobre los motivos que te impulsan a entrenar, competir o mantenerte activo en tu práctica.</p>
+      <p style="color: #ffad33"><strong>⚠️ Importante:</strong> Esta cuestionario es de uso orientativo y no reemplaza una evaluación profesional completa.</p>
+      <form id="form-motivacion">
+        <table class="poms-table">
+          <thead>
+            <tr>
+              <th>Ítem</th>
+              <th>Nada</th>
+              <th>Poco</th>
+              <th>Moderado</th>
+              <th>Bastante</th>
+              <th>Muchísimo</th>
+            </tr>
+          </thead>
+          <tbody id="motivacion-items"></tbody>
+        </table>
+        <br />
+        <button type="submit" class="btn">Enviar respuestas</button>
+        <button type="button" class="btn" id="reiniciar-btn">🔄 Reiniciar test</button>
+      </form>
+    </section>
+
+    <section class="smart-section">
+      <h3>Resultado</h3>
+      <canvas id="motivacionChart" width="400" height="300"></canvas>
+      <div id="motivacion-explicacion" style="margin-top: 1rem; font-size: 1rem;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>LCI Insight #GO LATAM </p>
+  </footer>
+
+  <script src="../../scripts/psico/test-motivacion.js"></script>
+</body>
+</html>
