@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Psicometrías - LCI Insight</title>
   <link rel="stylesheet" href="../styles/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="../scripts/psico/informe.js"></script>
 </head>
 <body>
   <!-- Encabezado con logo -->
@@ -29,15 +31,38 @@
 
   <main>
     <section class="smart-section">
-      <h2>🧠 Test Psicométricos</h2>
-      <p>Explora herramientas para evaluar tus recursos mentales, emociones y bienestar.</p>
-      <div class="test-buttons">
-        <a href="psicometrias/test-CPRD.html" class="test-button">🏋️‍♂️ Recursos Psicodeportivos (CPR) (Versión breve no validada)</a>
+      <h2>🧠 Psicometrías Deportivas</h2>
+      <p>Esta son algunos cuestionarios de autoreporte que te pueden ayudar a detectar necesidades psicodeportivas</p>
+      <p style="color: #ffad33"><strong>⚠️ Importante:</strong> Si bien estos instrumentos están en su mayoría validados, no reemplazan la evaluación integral de un profesional del área.</p>      <div class="test-buttons">
+        <a href="psicometrias/test-CPRD.html" class="test-button">🏋️‍♂️ Recursos Psicodeportivos (CPR) </a>
         <a href="psicometrias/test-ansiedad.html" class="test-button">😰 Ansiedad Precompetitiva (CSAI) </a>
         <a href="psicometrias/test-poms.html" class="test-button">🙂 Test de Ánimo (POMS)</a>
         <a href="psicometrias/test-motivacion.html" class="test-button">🎯 Bases Motivacionales</a>
-        <a href="psicometrias/test-salud.html" class="test-button">💖 Salud Integral (Próximamente)</a>
       </div>
+    </section>
+  </main>
+
+  <main>
+    <section class="smart-section">
+      <h2>💚 Inventarios y Cuestionarios de Salud mental</h2>
+      <p>Retroalimentación respecto a necesidades de salud mental. Una buena salud aportará siempre a tu buen desempeño competitivo.</p>
+      <p style="color: #ffad33"><strong>⚠️ Importante:</strong> Si bien estos instrumentos están en su mayoría validados, no reemplazan la evaluación integral de un profesional del área.</p>
+      <div class="test-buttons">
+        <a href="psicometrias/test-CPRD.html" class="test-button">PHQ-9 // Depresión </a>
+        <a href="psicometrias/test-ansiedad.html" class="test-button">GAD-7 // Ansiedad Generalizada </a>
+        <a href="psicometrias/test-poms.html" class="test-button">WHO-5 // Bienestar Emocional</a>
+        <a href="psicometrias/test-motivacion.html" class="test-button">Escala de Rosenberg	// Autoestima </a>
+        <a href="psicometrias/test-motivacion.html" class="test-button">PSQI (simplificado)	// Calidad de sueño</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- NUEVA SECCIÓN: Botón de descarga de informe -->
+  <main>
+    <section class="smart-section" style="text-align: center; margin-top: 2rem;">
+      <h3>🗂️ ¿Ya completaste tus tests?</h3>
+      <p>Puedes descargar un informe con tus resultados para compartir con tu psicólogo/a deportivo.</p>
+      <button id="descargarInforme" class="test-button">📥 Descargar Informe</button>
     </section>
   </main>
 
@@ -45,5 +70,3 @@
   <footer>
     <p>LCI Insight #GO LATAM </p>
   </footer>
-</body>
-</html>
